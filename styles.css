@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    font-family: "Koulen", sans-serif;
+    line-height: 1.6;
+}
+
+.Title{
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    color: white;
+    margin: 0;
+}
+
+.top_band{
+    width  : 100%;
+    height : 150px;
+    background : #102645;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.entreprise_button{
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.entreprise_button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+
+.fonctionnement_button{
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.fonctionnement_button:hover{
+    background-color: #ffffff1a;
+    transform: translateY(-2px);
+}
+
+.produits_button{
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.produits_button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.contact_button{
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+    background-color: black;
+}
+
+.contact_button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 150px);
+    overflow: hidden;
+    margin-top: 150px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.content-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.presentation {
+    font-family: "Shrikhand", serif;
+    font-size: 48px;
+    color: #102645;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.presentation_txt {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #102645;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.presentation_txt p {
+    margin-bottom: 20px;
+}
+
+.second_band{
+    width  : 100%;
+    min-height : 400px;
+    background : #102645;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 60px 0 0 0;
+    padding: 40px 80px;
+    box-sizing: border-box;
+}
+
+.band-gallery{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding: 20px 0;
+}
+
+.band-image{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.band-image:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+.band-image:nth-child(1) {
+    top: 20px;
+    left: 150px;
+}
+
+.band-image:nth-child(2) {
+    top: 20px;
+    left: 630px;
+}
+
+.band-image:nth-child(3) {
+    top: 20px;
+    left: 1100px;
+}
+
+.band-content{
+    flex: 1;
+}
+
+.engagements-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.Engagements {
+    font-family: "Shrikhand", serif;
+    font-size: 48px;
+    color: #102645;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.engagement-image-container {
+    width: 100%;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    height: 30vh;
+    background-image: url('pictures/engagement.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa;
+}
+
+.engagement-image {
+    display: none;
+}
+.footer{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    position: absolute;
+    left: 700px;
+}

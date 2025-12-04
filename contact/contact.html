@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Brass'Uni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Shrikhand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff;
+      font-family: "Koulen", sans-serif;
+      line-height: 1.6;
+    }
+
+    .Title {
+      font-family: "Shrikhand", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 48px;
+      color: white;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .top_band {
+      width: 100%;
+      height: 150px;
+      background: #102645;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-buttons button {
+      font-family: "Koulen", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .nav-buttons button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .contact_button {
+      background-color: black !important;
+    }
+
+    .hero-section {
+      margin-top: 150px;
+      height: 40vh;
+      background: linear-gradient(135deg, #102645 0%, #1a3a5f 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content h1 {
+      font-family: "Shrikhand", serif;
+      font-size: 64px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .hero-content p {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 100px 20px;
+    }
+
+    .contact-info {
+      padding: 40px;
+    }
+
+    .info-title {
+      font-family: "Shrikhand", serif;
+      font-size: 42px;
+      color: #102645;
+      margin-bottom: 40px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 35px;
+      padding: 25px;
+      background: #f8f9fa;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 5px 20px rgba(16, 38, 69, 0.1);
+    }
+
+    .info-icon {
+      font-size: 32px;
+      margin-right: 20px;
+      min-width: 40px;
+    }
+
+    .info-content h3 {
+      font-family: "Shrikhand", serif;
+      font-size: 24px;
+      color: #102645;
+      margin-bottom: 8px;
+    }
+
+    .info-content p {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 18px;
+      color: #102645;
+      line-height: 1.6;
+    }
+
+    .info-content a {
+      color: #102645;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .info-content a:hover {
+      color: #1a3a5f;
+      text-decoration: underline;
+    }
+
+    .contact-form-container {
+      background: #102645;
+      padding: 60px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(16, 38, 69, 0.3);
+    }
+
+    .form-title {
+      font-family: "Shrikhand", serif;
+      font-size: 36px;
+      color: white;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+    }
+
+    .form-group label {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 20px;
+      color: white;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 16px;
+      background: white;
+      color: #102645;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #f4a261;
+      box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 18px;
+      background: white;
+      color: #102645;
+      border: none;
+      border-radius: 10px;
+      font-family: "Koulen", sans-serif;
+      font-size: 22px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .submit-button:hover {
+      background: #f4a261;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(244, 162, 97, 0.4);
+    }
+
+    .social-section {
+      background: #f8f9fa;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .social-title {
+      font-family: "Shrikhand", serif;
+      font-size: 42px;
+      color: #102645;
+      margin-bottom: 40px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .social-icon {
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-icon:hover {
+      transform: translateY(-10px) scale(1.1);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 13px;
+      color: #102645;
+    }
+
+    @media (max-width: 968px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-container {
+        padding: 40px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top_band">
+      <h1 class="Title" onclick="window.location.href='../index.html'">Brass'Uni</h1>
+    <div class="nav-buttons">
+        <button onclick="window.location.href='../entreprise/entreprise.html'">L'entreprise</button>
+        <button onclick="window.location.href='../fonctionnement/fonctionnement.html'">Le fonctionnement</button>
+        <button onclick="window.location.href='../produits/produits.html'">Nos produits</button>
+        <button class="contact_button" onclick="window.location.href='../contact/contact.html'">Contact</button>
+    </div>
+  </div>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Contactez-nous</h1>
+      <p>Une question, un projet ? Nous sommes là pour vous !</p>
+    </div>
+  </div>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2 class="info-title">Nos Coordonnées</h2>
+      
+      <div class="info-item">
+        <div class="info-icon">📧</div>
+        <div class="info-content">
+          <h3>Email</h3>
+          <p><a href="mailto:contact@brassuni.fr">contact@brassuni.fr</a></p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📱</div>
+        <div class="info-content">
+          <h3>Téléphone</h3>
+          <p><a href="tel:+0102030405">+01 02 03 04 05</a></p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div class="info-content">
+          <h3>Localisation</h3>
+          <p>Île-de-France<br>Interventions sur toute la région</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">⏰</div>
+        <div class="info-content">
+          <h3>Disponibilité</h3>
+          <p>Lundi - Vendredi : 9h - 18h<br>Événements : Weekend & Soirs</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">🎪</div>
+        <div class="info-content">
+          <h3>Nos Événements</h3>
+          <p>Retrouvez-nous sur les festivals et marchés de la région. Suivez nos réseaux sociaux pour connaître nos prochaines apparitions !</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-container">
+      <h2 class="form-title">Envoyez-nous un message</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Nom Complet *</label>
+          <input type="text" id="name" name="name" required placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="votre@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+0102030405">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Sujet *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Sélectionnez un sujet</option>
+            <option value="event">Demande d'intervention événement</option>
+            <option value="private">Événement privé</option>
+            <option value="partnership">Partenariat</option>
+            <option value="info">Informations produits</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Décrivez votre demande en détail..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Envoyer le Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="social-section">
+    <h2 class="social-title">Suivez-nous sur les réseaux</h2>
+    <div class="social-icons">
+      <div class="social-icon" onclick="alert('Facebook : @BrassUni')">📘</div>
+      <div class="social-icon" onclick="alert('Instagram : @brass_uni')">📷</div>
+      <div class="social-icon" onclick="alert('Twitter : @BrassUni')">🐦</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>&copy; 2025 Cillian Bauger - Tous droits réservés</p>
+    </div>
+  </footer>
+</body>
+</html>

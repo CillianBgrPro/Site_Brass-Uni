@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'entreprise - Brass'Uni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Shrikhand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff;
+      font-family: "Koulen", sans-serif;
+      line-height: 1.6;
+    }
+
+    .Title {
+      font-family: "Shrikhand", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 48px;
+      color: white;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .top_band {
+      width: 100%;
+      height: 150px;
+      background: #102645;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-buttons button {
+      font-family: "Koulen", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .nav-buttons button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .contact_button {
+      background-color: black !important;
+    }
+
+    .hero-section {
+      margin-top: 150px;
+      height: 60vh;
+      background: linear-gradient(135deg, #102645 0%, #1a3a5f 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content h1 {
+      font-family: "Shrikhand", serif;
+      font-size: 64px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .hero-content p {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      background-color: #ffffff;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: "Shrikhand", serif;
+      font-size: 42px;
+      color: #102645;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .story-content {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 20px;
+      color: #102645;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      text-align: justify;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .value-card {
+      background: #f8f9fa;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+    }
+
+    .value-card:hover {
+      transform: translateY(-10px);
+      border-color: #102645;
+      box-shadow: 0 10px 30px rgba(16, 38, 69, 0.2);
+    }
+
+    .value-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .value-title {
+      font-family: "Shrikhand", serif;
+      font-size: 28px;
+      color: #102645;
+      margin-bottom: 15px;
+    }
+
+    .value-description {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 18px;
+      color: #102645;
+      line-height: 1.6;
+    }
+
+    .team-section {
+      background: #102645;
+      padding: 80px 20px;
+      color: white;
+      margin-top: 60px;
+    }
+
+    .team-title {
+      font-family: "Shrikhand", serif;
+      font-size: 42px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .team-description {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 13px;
+      color: #102645;
+    }
+  </style>
+</head>
+<body>
+  <div class="top_band">
+      <h1 class="Title" onclick="window.location.href='../index.html'">Brass'Uni</h1>
+      <div class="nav-buttons">
+          <button onclick="window.location.href='entreprise.html'">L'entreprise</button>
+          <button onclick="window.location.href='../fonctionnement/fonctionnement.html'">Le fonctionnement</button>
+          <button onclick="window.location.href='../produits/produits.html'">Nos produits</button>
+          <button class="contact_button" onclick="window.location.href='../contact/contact.html'">Contact</button>
+      </div>
+  </div>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Notre Histoire</h1>
+      <p>Une aventure étudiante au service de la bière artisanale locale</p>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <h2 class="section-title">L'aventure Brass'Uni</h2>
+    <div class="story-content">
+      <p>Brass'Uni est née de la rencontre entre des étudiants passionnés et un brasseur local talentueux. Notre histoire commence avec la découverte de "La Goutte", une bière artisanale exceptionnelle brassée par Le Four à Brique, un artisan reconnu pour son savoir-faire et son engagement envers la qualité.</p>
+      <p>Face à la richesse de cette production locale et au manque de visibilité dont souffrent souvent les artisans, nous avons décidé de créer un pont entre le producteur et les consommateurs. Notre mission est simple mais ambitieuse : faire découvrir cette bière d'exception au plus grand nombre, tout en valorisant le travail artisanal et les circuits courts.</p>
+      <p>En tant qu'étudiants entrepreneurs, nous apportons notre énergie, notre créativité et notre vision moderne du commerce pour dynamiser la distribution de cette bière locale. Chaque événement, chaque festival, chaque marché est pour nous une opportunité de partager notre passion et de créer du lien autour d'un produit authentique.</p>
+    </div>
+
+    <h2 class="section-title">Nos Valeurs</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3 class="value-title">Convivialité</h3>
+        <p class="value-description">Créer des moments de partage authentiques autour d'une bière de qualité</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌱</div>
+        <h3 class="value-title">Local</h3>
+        <p class="value-description">Valoriser le savoir-faire artisanal et les circuits courts de notre région</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⭐</div>
+        <h3 class="value-title">Qualité</h3>
+        <p class="value-description">Offrir un produit d'exception, brassé avec passion et expertise</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🚀</div>
+        <h3 class="value-title">Innovation</h3>
+        <p class="value-description">Allier tradition brassicole et approches modernes de distribution</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💚</div>
+        <h3 class="value-title">Engagement</h3>
+        <p class="value-description">Promouvoir une consommation responsable et durable</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🎓</div>
+        <h3 class="value-title">Passion</h3>
+        <p class="value-description">Transmettre notre enthousiasme pour la bière artisanale</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="team-section">
+    <h2 class="team-title">Une équipe jeune et dynamique</h2>
+    <p class="team-description">Brass'Uni, c'est avant tout une équipe d'étudiants motivés qui croient en la force du collectif et en la valorisation des productions locales. Notre jeunesse est notre force : elle nous permet d'apporter un regard neuf sur la distribution de bière artisanale et de créer des événements qui rassemblent. Nous sommes convaincus que l'entrepreneuriat étudiant peut être un véritable moteur de dynamisme économique local tout en préservant l'authenticité et la qualité des produits que nous représentons.</p>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>&copy; 2025 Cillian Bauger - Tous droits réservés</p>
+    </div>
+  </footer>
+</body>
+</html>
